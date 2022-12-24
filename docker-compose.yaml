@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    volumes:
+      - /home/chernyavskijea/predictions_bot/app:/data
+
+networks:
+  default:
+    name: bridge-nerwork
+    external: true
